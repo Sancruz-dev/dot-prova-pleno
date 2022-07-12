@@ -1,0 +1,119 @@
+/*=============== ACCORDION ===============*/
+.accordion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 5rem;
+  background-color: var(--box2-color);
+}
+
+.accordion__container {
+  width: 100%;
+  display: grid;
+  row-gap: 1px;
+  background: #fff;
+  border-radius: .75rem;
+}
+
+.accordion__item {
+  position: relative;
+  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  background-color: var(--box-color);
+  transition: all .25s ease;
+}
+
+
+.accordion__item:first-child {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.accordion__item:last-child {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.accordion__item:hover .header__title,
+.accordion__item:hover .header__icon {
+  color: #fff;
+  fill: #fff;
+}
+.accordion__item:hover {
+  background-color: var(--body-color);
+}
+
+.item__header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1.5rem;
+  transition: .5s;
+}
+
+.item__header .header__title {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: .15rem;
+  transition: .2s;
+}
+
+.item__header .header__icon {
+  fill: #fff;
+  right: 0;
+  font-size: 1.5rem;
+  height: max-content;
+  transition: all .4s ease;
+}
+
+.item__header:hover .header__title,
+.item__header:hover .header__icon {
+  color: #fff;
+  fill: #fff;
+}
+
+
+.accordion__content {
+  display: flex;
+  overflow: hidden;
+  height: 0rem;
+  background: #fff;
+  transition: all .25s ease;
+}
+
+.accordion__description {
+  text-align: left;
+  padding: 0 1.25rem 1.25rem 1.5rem;
+  font-size: 1em;
+  align-self: center;
+}
+
+.accordion__figure {
+  margin-top: .19rem;
+  height: 100%;
+}
+
+.figure__img {
+  max-width: 20rem;
+  border: .6rem solid var(--box-color);
+}
+
+/* Mudanças spós à ativação do accordion */
+.accordion-open .accordion__content {
+  margin: 1rem 1.5rem;
+  border-radius: .5rem;
+}
+
+.accordion-open {
+  color: var(--box-color);
+  background-color: #fff;
+}
+
+.accordion-open .header__icon {
+  transform: rotate(180deg);
+  fill: var(--box-color);
+}
+
+.accordion-open .header__title {
+  color: var(--box-color);
+}

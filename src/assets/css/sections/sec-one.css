@@ -1,0 +1,133 @@
+.sec-one {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.sec-one__banner-slider{
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.banner-slider__header {
+  display: none;
+}
+
+.banner-slider__slide{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  clip-path: circle(0% at 0 50%);
+}
+
+.banner-slider__slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.banner-slider__slide img{
+  z-index: 1;
+  max-width: 1366px;
+  height: 100vh;
+  max-height: 100vh;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.slide__info{
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 100%;
+  max-width: 1366px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.info__title{
+  color: var(--aux-color);
+  font-size: 3.75em;
+  font-weight: medium;
+  text-transform: uppercase;
+}
+
+.info__subtitle{
+  color: var(--aux-sec-color);
+  font-weight: normal;
+  font-size: 1.55em;
+  text-align: center;
+}
+
+.banner-slider__navigation{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 1.3rem 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: hsla(0, 0%, 18%, .75);
+  z-index: 2;
+}
+
+.navigation__btn{
+  background: #fff;
+  padding: 1rem;
+  margin: 0 .5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: .5rem solid var(--tertiary-color);
+  transition: .8s;
+}
+
+.navigation__btn:hover {
+  background-color: var(--aux-color);
+  transition: .2s;
+}
+
+.navigation__btn.active{
+  border: .5rem solid #fff;
+  background-color: var(--aux-color);
+}
+
+.banner-slider__scrollicon {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 11.5rem;
+  transform: translateX(-50%);
+  animation: iconFloat .8s infinite alternate ease-in-out;
+}
+
+.banner-slider__scrollicon svg path{
+  transition: .3s;
+}
+
+.banner-slider__scrollicon:hover svg path{
+  fill: #fff;
+}
+
+@keyframes iconFloat {
+  100% {
+    transform: translateY(1rem);
+  }
+  0% {
+    transform: translateY(0rem);
+  }
+}
