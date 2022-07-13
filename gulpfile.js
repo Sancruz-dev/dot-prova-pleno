@@ -23,14 +23,16 @@ const
   src_babel_dir = "src/assets/js/babel",
   src_babel_file = "src/assets/js/babel/all-babel.js",
   css_src = "src/assets/css/**/*.css",
-  img_src = "src/assets/img/**/*";
+  img_src = "src/assets/img/**/*",
+  page_src = "src/assets/page/**/*";
 
 
 // DIST PATH ------
 const
   js_dist = "./dist/assets/js",
   css_dist = "./dist/assets/css/style",
-  img_dist = "./dist/assets/img";
+  img_dist = "./dist/assets/img",
+  page_dist = "./dist/assets/page";
 
 
 // Compile Javascript ------
@@ -45,6 +47,9 @@ function useBabel() {
 // BUILD | INJECT | MINIFY | CONCAT 
 // Minify only PNG, JPEG and WebP images
 function index() {
+  let appStreamPage = gulp.src(page_src)
+    .pipe(gulp.dest(page_dist));
+
   let appStreamImg = gulp.src(img_src)
     .pipe(tinypng('5CbTXlCZJm5lSdqHlzhZ5V1vHnt8XsHH'))
     .pipe(gulp.dest(img_dist));
@@ -69,7 +74,10 @@ function index() {
 
   return gulp.src('./src/index.html')
     .pipe(inject(es.merge(
-      appStreamCSS, appStreamJs, appStreamImg
+      appStreamPage, 
+      appStreamCSS, 
+      appStreamJs, 
+      appStreamImg
     )))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist'));

@@ -8,7 +8,7 @@
 }
 
 .accordion__container {
-  width: 100%;
+  max-width: 1366px;
   display: grid;
   row-gap: 1px;
   background: #fff;

@@ -51,4 +51,4 @@ const repeat = function (activeClass) {
   }
   repeater();
 }
-// repeat();
+repeat();

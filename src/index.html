@@ -37,7 +37,11 @@
             <h2 class="info__title">Lorem Ipsum</h2>
             <p class="info__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
           </div>
-          <img src="./assets/img/banner.png" class="slide__img" alt="Ilustração da natureza e sua beleza" />
+          <img 
+            src="./assets/img/banner.png" 
+            class="slide__img" 
+            alt="Ilustração da natureza e sua beleza" 
+          />
         </div>
 
         <div class="banner-slider__slide">
@@ -45,7 +49,11 @@
             <h2 class="info__title">Lorem Ipsum</h2>
             <p class="info__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
           </div>
-          <img src="./assets/img/banner.png" class="slide__img" alt="Ilustração da natureza e sua beleza" />
+          <img 
+            src="./assets/img/banner.png" 
+            class="slide__img" 
+            alt="Ilustração da natureza e sua beleza" 
+          />
         </div>
 
         <div class="banner-slider__slide">
@@ -53,7 +61,17 @@
             <h2 class="info__title">Lorem Ipsum</h2>
             <p class="info__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
           </div>
-          <img src="./assets/img/banner.png" class="slide__img" alt="Ilustração da natureza e sua beleza" />
+          <img 
+            src="./assets/img/banner.png" 
+            class="slide__img" 
+            alt="Ilustração da natureza e sua beleza" 
+          />
+        </div>
+
+        <div class="banner-slider__navigation">
+          <button class="navigation__btn active"></button>
+          <button class="navigation__btn"></button>
+          <button class="navigation__btn"></button>
         </div>
 
         <a href="#sec-two" class="banner-slider__scrollicon">
@@ -63,11 +81,6 @@
           </svg>
         </a>
 
-        <div class="banner-slider__navigation">
-          <button class="navigation__btn active"></button>
-          <button class="navigation__btn"></button>
-          <button class="navigation__btn"></button>
-        </div>
       </div>
     </section>
 
@@ -167,10 +180,13 @@
           <header class="item__header">
             <h3 class="header__title">Lorem Ipsum</h3>
 
-            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="18px" height="25px">
-              <path fill-rule="evenodd"
-                d="M7.201,0.6 L7.201,18.358 L0.3,11.412 L0.3,16.322 L8.999,25.6 L17.996,16.322 L17.996,11.412 L10.799,18.358 L10.799,0.6 L7.201,0.6 Z" />
+            <svg 
+              class="header__icon" 
+              xmlns="http://www.w3.org/2000/svg" 
+              xmlns:xlink="http://www.w3.org/1999/xlink" 
+              width="18px" height="25px"
+            >
+              <path fill-rule="evenodd" d="M7.201,0.6 L7.201,18.358 L0.3,11.412 L0.3,16.322 L8.999,25.6 L17.996,16.322 L17.996,11.412 L10.799,18.358 L10.799,0.6 L7.201,0.6 Z" />
             </svg>
           </header>
 
@@ -192,30 +208,47 @@
 
 
     <!-- --- SECTION: FIVE --- -->
-    <section class="sec-five" id="sec-five">
+    <section class="sec-five">
       <div class="sec-five__container-form">
         <form action="./assets/page/success.html" class="container-form__form">
           <fieldset class="form__input-container">
             <div class="input-container__input-box">
               <p>*Nome:</p>
-              <input name="name" type="text" class="input-box__input" placeholder="Informe seu nome" minlength="3"
-                maxlength="50" required>
+              <input 
+                name="name" 
+                type="text" 
+                class="input-box__input" 
+                placeholder="Informe seu nome" 
+                minlength="3"
+                maxlength="50" 
+                required
+              />
             </div>
           </fieldset>
 
           <fieldset class="form__input-container">
             <div class="input-container__input-box">
               <p>*Email:</p>
-              <input name="email" type="email" class="input-box__input" placeholder="Informe seu e-mail" minlength="9"
-                maxlength="50" required>
+              <input 
+                name="email" 
+                type="email" 
+                class="input-box__input" 
+                placeholder="Informe seu e-mail" 
+                minlength="9"
+                maxlength="50" 
+                required
+              />
             </div>
 
             <div class="input-container__input-box">
               <p>*Telefone:</p>
-              <input name="tel" type="tel" class="input-box__input" placeholder="(__) _____-____" maxlength="15"
+              <input 
+                name="tel" type="tel" class="input-box__input" placeholder="(__) _____-____" 
+                maxlength="15"
                 OnKeyPress="formatTel('##########-####', this)"
                 pattern="^(?=.*[0-9])(?!.*[a-z])(?!.*[A-Z])(?!.*[!@#%^&*_=+]).{15,15}$"
-                title="O telefone deve conter 11 números, apenas números" required>
+                title="O telefone deve conter 11 números, apenas números" required
+              />
             </div>
           </fieldset>
 
@@ -239,11 +272,11 @@
   </footer>
 
   <!-- inject:js -->
-  <script src="assets/js/cloned-elements.js"></script>
-  <script src="assets/js/banner-slider.js"></script>
-  <script src="assets/js/card-slider.js"></script>
-  <script src="assets/js/accordion.js"></script>
-  <script src="assets/js/form.js"></script>
+  <script src="assets/js/1-cloned-elements.js"></script>
+  <script src="assets/js/2-banner-slider.js"></script>
+  <script src="assets/js/3-card-slider.js"></script>
+  <script src="assets/js/4-accordion.js"></script>
+  <script src="assets/js/5-form.js"></script>
   <!-- endinject -->
 </body>
 
