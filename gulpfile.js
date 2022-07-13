@@ -48,6 +48,7 @@ function useBabel() {
 // Minify only PNG, JPEG and WebP images
 function index() {
   let appStreamPage = gulp.src(page_src)
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(page_dist));
 
   let appStreamImg = gulp.src(img_src)
