@@ -69,7 +69,7 @@ Estão disponíveis para uso as seguintes **tasks**: <br/>
 Como forma de mostrar o quão poderoso é o Gulp Js, logo abaixo estão os resultados de seu uso dentro do sistema:
 
 <img 
-  style="max-height: 28rem"
+  style="max-height: 24rem"
   src="https://user-images.githubusercontent.com/83969467/178782499-fca4d03d-1366-4a97-927c-cef61e4c1b90.png"
   title="Comparação entre a pasta 'src' e 'dist'"
   alt="Imagem de comparação entre a pasta 'src' e 'dist'"
@@ -77,7 +77,7 @@ Como forma de mostrar o quão poderoso é o Gulp Js, logo abaixo estão os resul
 
 Podemos dizer que a pasta **dist** é o resultado da otimização completa sobre a pasta **src**, visto que, tivemos um ganho de **70% de performance** ao calcularmos a diferença entre o ***peso*** dos dois diretórios da aplicação.
 
-Além disso, o total de **18** arquivos foi reduzido em **10**, economizando os **requests** da página e aumentando sua velocidade de carregamento.
+Além disso, o total de **18** arquivos foi reduzido em **10**, economizando os **requests** da página e aumentando sua velocidade de carregamento. Isso tudo devido à concatenação de arquivos CSS e JS.
 
 <br/>
 
